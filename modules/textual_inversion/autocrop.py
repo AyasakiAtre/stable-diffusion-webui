@@ -312,9 +312,7 @@ def download_and_cache_models():
         response = requests.get(model_url)
         with open(model_file_path, "wb") as f:
             f.write(response.content)
-
-    if os.path.exists(model_file_path):
-        return model_file_path
+    return model_file_path
 
 
 class PointOfInterest:
